@@ -1,0 +1,36 @@
+@model DNTFrameworkCore.TestWebApp.Models.Roles.RoleIndexViewModel
+
+@{
+    LocalizationResourceLocation = "DNTFrameworkCore.TestWebApp";
+    ViewData["Title"] = L("Administration.Views.User.Index.Title");
+    // ViewBag["ActiveMenu"] = AdministrationMenuNames.UserManagement;
+}
+
+<div class="row margin-bottom-5">
+    <div class="col-md-2">
+        <a class="btn btn-info" asp-modal-link asp-permission="@PermissionNames.Roles_Create" asp-controller="Roles" asp-action="Create">
+            <i class="fa fa-plus"></i>
+            New Role
+        </a>
+    </div>
+</div>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-12" id="RolesList">
+        @foreach (var item in Model.Items)
+        {
+            <a class="btn btn-secondary" asp-modal-link
+               asp-controller="Roles" asp-action="Edit" asp-route-id="@item.Id" asp-permission="@PermissionNames.Roles_Edit">
+                <i class="fa fa-pencil"></i>
+                @item.Name
+            </a>
+        }
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+
+}

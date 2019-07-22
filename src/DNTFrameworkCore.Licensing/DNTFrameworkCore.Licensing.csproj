@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>DNTFrameworkCore.Licensing</Title>
+    <VersionPrefix>3.5.4</VersionPrefix>
+    <Description>DNTFrameworkCore.Licensing</Description>
+    <Authors>GholamReza Rabbal</Authors>
+    <PackageProjectUrl>https://github.com/rabbal/DNTFrameworkCore</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/rabbal/DNTFrameworkCore/blob/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/rabbal/DNTFrameworkCore</RepositoryUrl>
+    <PackageTags>.NET Core; ASP.NET Core; Licensing</PackageTags>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>DNTFrameworkCore.Licensing</AssemblyName>
+    <RootNamespace>DNTFrameworkCore.Licensing</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="4.5.0" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DNTFrameworkCore\DNTFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>

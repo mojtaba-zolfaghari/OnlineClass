@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Title>DNTFrameworkCore</Title>
+        <VersionPrefix>3.5.4</VersionPrefix>
+        <Description>DNTFrameworkCore is a Lightweight and Extensible Infrastructure for Building Web Applications</Description>
+        <Authors>GholamReza Rabbal</Authors>
+        <PackageProjectUrl>https://github.com/rabbal/DNTFrameworkCore</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/rabbal/DNTFrameworkCore/blob/master/LICENSE.md</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/rabbal/DNTFrameworkCore</RepositoryUrl>
+        <PackageTags>.NET Core; ASP.NET Core; EFCore; Multitenancy; Validation; Transaction; Framework; Design; Logging; SOLID; Event-Driven; Domain</PackageTags>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>DNTFrameworkCore</AssemblyName>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RootNamespace>DNTFrameworkCore</RootNamespace>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>
+        </DocumentationFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Castle.Core" Version="4.4.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+        <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+        <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+        <PackageReference Include="System.Data.Common" Version="4.3.0" />
+        <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.16" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="README.md">
+            <Pack>true</Pack>
+            <PackagePath>README.md</PackagePath>
+        </Content>
+    </ItemGroup>
+</Project>
