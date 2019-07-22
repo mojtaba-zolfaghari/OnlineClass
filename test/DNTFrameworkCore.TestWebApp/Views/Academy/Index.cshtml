@@ -1,0 +1,46 @@
+﻿@model IPagedQueryResult<AcademyModel>
+@{
+    LocalizationResourceLocation = "DNTFrameworkCore.TestWebApp";
+    ViewData["Title"] = L("Administration.Views.Blog.Index.Title");
+    // ViewBag["ActiveMenu"] = AdministrationMenuNames.UserManagement;
+}
+<div class="row margin-bottom-5">
+    <div class="col-md-2">
+        <a class="btn btn-info" asp-modal-link asp-permission="@PermissionNames.Blogs_Create" asp-controller="Academy" asp-action="Create">
+            <i class="fa fa-plus"></i>
+            New Academy
+        </a>
+    </div>
+</div>
+<hr />
+<div class="row" id="BlogsList">
+    @foreach (var item in Model.Items)
+    {
+        <div class="col-md-6">
+            <div class="card mb-lg-4">
+                <div class="card-header">
+                    @item.AcademyName
+                </div>
+                <div class="card-body">
+                    <input type="text" readonly="readonly" value="@item.Address" class="form-control" />
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-light" asp-modal-link
+                       asp-controller="Academy" asp-action="Edit" asp-route-id="@item.Id" asp-permission="@PermissionNames.Academy_Edit">
+                        <i class="fa fa-pencil"></i>
+                        Edit
+                    </a>
+                    <a class="btn btn-light" asp-modal-delete-link asp-model-id="@item.Id"
+                       asp-controller="Academy" asp-action="Delete" asp-if="!@item.IsNew()" asp-permission="@PermissionNames.Academy_Delete"
+                       title="Delete Academy">
+                        <i class="fa fa-trash text-danger"></i>
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}
